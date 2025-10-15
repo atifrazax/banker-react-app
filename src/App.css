@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* ---------------Variables-------------- */
+:root {
+  --primary-color: orangered;
+  --secondary-color: #f9f9f9;
+  --dark-color: #050407b3;
+  /* --max-width: 1100px; */
+
+}
+body {
+  font-family: 'Sansation', sans-serif;
+  font-weight: 400; 
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+p, blockquote {
+  font-weight: 400; 
+  color: grey;
+}
+/* ---------------Animation-------------- */
+.animate {  
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* -------------Narbar-------------- */
+.bg-image {
+  position: relative;
+  color: var(--secondary-color);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/image-1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  /* color: #B8B2A6B3; */
+  color: #ccc;
+  z-index: -1;
+}
+.navbar {
+    transition: background-color 0.3s ease;
+}
+.nav-link {
+  color: var(--secondary-color) !important;
+  opacity: 0.8;
+}
+.scrolled {
+  background-color: var(--secondary-color) !important;
+  color: var(--dark-color) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.scrolled a {
+  color: var(--dark-color) !important;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color) !important;
+}
+h1 b {
+  color: var(--primary-color);
+}
+h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 45px;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+#works h3 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 35px;
+}
+.btn {
+  border-radius: 30px !important;
+  background-color: var(--secondary-color);
+}
+.btn:hover {
+  color: var(--dark-color) !important;
+  background-color: var(--secondary-color) !important;
+  border-color: var(--primary-color) !important;
+  /* border-radius: 30px !important; */
+}
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color) !important;
+}
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--secondary-color) !important;
+  /* border-radius: 30px !important; */
+}
+#email-input, #form input {
+  border-radius: 30px;
+}
+.text-primary {
+  color: var(--primary-color);
+}
+
+#services, #pricing, #contact {
+  background-color: rgba(182, 182, 182, 0.1); 
+}
+#services a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+#carousel-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 70px;
+}
+/* .carousel-item i {
+  font-size: 30px;
+} */
+.carousel-indicators {
+  bottom: -100px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.carousel-indicators .active {
+  width: 25px;
+  height: 12px;
+  border-radius: 45% 45%;
+  background-color: var(--primary-color) !important;
+}
+
+#pricing .card {
+  height: 80vh;
+  transition: all 0.3s ease-in-out;
+}
+#pricing .card:hover {
+  transform: scale(1.05);
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+/* --------------Works-------------- */
+
+/* ------------Team-------------- */
+.social-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+#social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  color: var(--secondary-color);
+}
+
+.social-wrapper:hover #social-bar {
+  transform: translateX(0);
+}
+#social-bar i {
+  color: var(--secondary-color);
+}
+
+/* ------------Contact-------------- */
+#contact i {
+  color: var(--primary-color);
+}
+
+/* ------------Footer-------------- */
+#footer {
+  /* height: 100vh; */
+  background-color: #050407b3;
+  color: var(--secondary-color);
+}
+#footer a, li > i {
+  color: var(--secondary-color);
+}
+#footer input {
+  border-radius: 30px 0px 0px 30px !important;
+}
+#footer button {
+  border-radius: 0px 30px 30px 0px !important;
+}
+#footer .bi:hover {
+  color: var(--primary-color) !important;
+}
